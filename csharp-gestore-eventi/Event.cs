@@ -83,8 +83,9 @@ namespace csharp_gestore_eventi
                 throw new Exception("Posti non disponibili");
             }
 
+            _EventCapacity -= seats;
             return _ReservedSeats += seats;
-            //_EventCapacity -= seats;
+           
         }
 
         public int CancelSeats(int seats)
@@ -102,6 +103,7 @@ namespace csharp_gestore_eventi
                 throw new ArgumentException("Il numero di posti da annullare deve essere maggiore di zero");
             }
 
+            _EventCapacity += seats;
             return ReservedSeats -= seats;
         }
 
