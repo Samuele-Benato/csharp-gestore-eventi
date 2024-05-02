@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_gestore_eventi
 {
-    internal class EventProgram
+    public class EventProgram
     {
         public string Title { get; set; }
         public List<Event> Events { get; set; } 
@@ -57,11 +57,11 @@ namespace csharp_gestore_eventi
 
         public void DeleteAllEvents() => Events.Clear();
 
-        public string GetEvents(List<Event> events)
+        public override string ToString()
         {
-            string result = "Lista degli eventi attuali:\n";
+            string result = "Lista eventi :\n";
 
-            foreach (var ev in events)
+            foreach (var ev in Events)
             {
                 result += ev.ToString() + "\n";
             }

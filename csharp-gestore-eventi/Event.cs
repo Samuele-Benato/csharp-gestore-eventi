@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_gestore_eventi
 {
-    internal class Event
+    public class Event
     {
         private string _Title;
         public string Title
